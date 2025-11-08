@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Celestial Dominion: Divine Bonds</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="characters.js" defer></script>
+    <script src="chat.js" defer></script>
+    <script src="user.js" defer></script>
+    <script src="faction.js" defer></script>
+    <script src="map.js" defer></script>
+</head>
+<body>
+    <h1>🌌 Celestial Dominion: Divine Bonds</h1>
+    <p><strong>Premium: $21.99/month</strong> | Default unlocked: <strong>Wolf Boy & Wolf Girl</strong></p>
+
+    <div id="chatBox"></div>
+    <div id="logBox"></div>
+
+    <h2>Characters</h2>
+    <div id="charList">
+        <button onclick="chatWith('Wolf Boy')">Wolf Boy</button>
+        <button onclick="chatWith('Wolf Girl')">Wolf Girl</button>
+        <button onclick="chatWith('Vampire Male')">Vampire Male (Premium)</button>
+        <button onclick="chatWith('Vampire Female')">Vampire Female (Premium)</button>
+        <button onclick="chatWith('Celestial God')">Celestial God (Premium)</button>
+        <button onclick="chatWith('Celestial Goddess')">Celestial Goddess (Premium)</button>
+        <button onclick="chatWith('Dragon King')">Dragon King (Premium)</button>
+        <button onclick="chatWith('Dragon Queen')">Dragon Queen (Premium)</button>
+        <button onclick="chatWith('Elf Prince')">Elf Prince (Premium)</button>
+        <button onclick="chatWith('Elf Princess')">Elf Princess (Premium)</button>
+    </div>
+
+    <p>Revive Key: <input type="text" id="keyInput" />
+        <button onclick="applyReviveKey()">Apply Key</button>
+    </p>
+
+    <button onclick="unlockPremium()">Premium Unlock</button>
+
+    <!-- Debug Section -->
+    <div id="debug">
+        <h3>Debug Info</h3>
+        <p id="status"></p>
+    </div>
+</body>
+</html>
