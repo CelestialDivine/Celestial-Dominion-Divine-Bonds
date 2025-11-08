@@ -32,5 +32,18 @@
     </p>
 
     <button onclick="unlockPremium()">Premium Unlock</button>
+
+    <!-- Debug Section -->
+    <div id="debug">
+        <h3>Debug Info</h3>
+        <p id="status"></p>
+    </div>
+    <script>
+        if (document.styleSheets.length === 0) {
+            document.getElementById("status").innerText = "⚠️ NO style.css loaded!";
+        } else {
+            document.getElementById("status").innerText = "✅ style.css is loading!";
+        }
+    </script>
 </body>
 </html>
