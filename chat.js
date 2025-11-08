@@ -3,7 +3,10 @@ function canAccess(charName) {
 }
 
 function chatWith(charName) {
-    if (!canAccess(charName)) { alert("Character locked. Use Premium key."); return; }
+    if (!canAccess(charName)) { 
+        alert("Character locked. Use Premium key.");
+        return; 
+    }
     let character = characters[charName];
     let dialogue = character.dialogue[Math.floor(Math.random() * character.dialogue.length)];
     document.getElementById("chatBox").innerText += `${charName}: ${dialogue}\n`;
@@ -30,7 +33,7 @@ function unlockPremium() {
 
 function renderCharacterButtons() {
     let charList = document.getElementById("charList");
-    charList.innerHTML = "";
+    charList.innerHTML = ""; // Clear old buttons
     for (let name of ["Luna Verenthia", "Kael Darksorrow", "Isis Vexara", "Vex Nocturne", "Aria Stellara", "Zalor Ethereon", "Thalgar Ignatius", "Veyra Pyra", "Eldrin Sylvanor", "Elara Luminara"]) {
         let button = document.createElement("button");
         button.innerText = name;
