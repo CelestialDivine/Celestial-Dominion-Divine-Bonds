@@ -1,3 +1,4 @@
+// Chat functionality
 function canAccess(charName) {
     return ["Luna Verenthia", "Kael Darksorrow"].includes(charName) || premiumUnlocked;
 }
